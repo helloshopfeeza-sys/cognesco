@@ -1900,47 +1900,35 @@ button {
 }
 
 @media (max-width: 768px) {
+
+  /* Keep sticky scroll working — just scale down cards */
   .horizontal-scroll-section {
-    height: auto;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .horizontal-scroll-section::-webkit-scrollbar {
-    display: none;
-  }
-
-  .horizontal-sticky-container {
-    position: relative;
-    height: auto;
-    overflow: visible;
+    height: 280vh;
   }
 
   .horizontal-track {
-    transform: none !important;
-    /* Disable JS translation on mobile */
-    padding: var(--section-gap) 20px;
-    height: auto;
-    gap: 40px;
+    gap: 4vh;
+    padding: 0 6vw;
+    height: 80vh;
   }
 
-  .h-card {
-    width: 85vw !important;
-    /* Override desktop widths */
-    scroll-snap-align: center;
-    padding: 0 !important;
-    border: none !important;
+  .h-intro {
+    width: 80vw;
+    padding-right: 6vw;
   }
 
-  .h-intro,
+  .h-principle {
+    width: 80vw;
+    padding: 0 4vw;
+  }
+
   .h-outro {
-    height: 60vh;
+    width: 70vw;
+    padding-left: 6vw;
   }
 
   .h-num {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 }
 
@@ -2692,43 +2680,30 @@ button {
     text-align: center;
   }
 
-  /* --- Horizontal Scroll --- */
+  /* --- Horizontal Scroll (keep sticky scroll, just resize) --- */
   .horizontal-scroll-section {
-    height: auto;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .horizontal-scroll-section::-webkit-scrollbar {
-    display: none;
-  }
-
-  .horizontal-sticky-container {
-    position: relative;
-    height: auto;
-    overflow: visible;
+    height: 280vh;
   }
 
   .horizontal-track {
-    transform: none !important;
-    padding: var(--section-gap) 20px;
-    height: auto;
-    gap: 40px;
+    gap: 4vh;
+    padding: 0 6vw;
+    height: 80vh;
   }
 
-  .h-card {
-    width: 85vw !important;
-    scroll-snap-align: center;
-    padding: 0 !important;
-    border: none !important;
+  .h-intro {
+    width: 80vw;
+    padding-right: 6vw;
   }
 
-  .h-intro,
+  .h-principle {
+    width: 80vw;
+    padding: 0 4vw;
+  }
+
   .h-outro {
-    height: auto;
-    min-height: 40vh;
+    width: 70vw;
+    padding-left: 6vw;
   }
 
   .h-title {
@@ -3106,9 +3081,21 @@ button {
     margin-bottom: 24px;
   }
 
-  /* --- Horizontal Scroll Mobile --- */
-  .h-card {
-    width: 90vw !important;
+  /* --- Horizontal Scroll (keep sticky, just shrink cards further) --- */
+  .horizontal-scroll-section {
+    height: 260vh;
+  }
+
+  .h-intro {
+    width: 85vw;
+  }
+
+  .h-principle {
+    width: 85vw;
+  }
+
+  .h-outro {
+    width: 80vw;
   }
 
   .h-title {
