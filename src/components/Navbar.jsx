@@ -12,6 +12,19 @@ export default function Navbar() {
         return () => window.removeEventListener('scroll', onScroll)
     }, [])
 
+    const handleServicesClick = (e) => {
+        // On mobile (hamburger menu open), toggle dropdown instead of navigating
+        if (window.innerWidth <= 768) {
+            e.preventDefault()
+            setDropdownOpen(prev => !prev)
+        }
+    }
+
+    const closeAll = () => {
+        setOpen(false)
+        setDropdownOpen(false)
+    }
+
     return (
         <nav className={`nav ${pinned ? 'pinned' : ''}`}>
             <div className="wrap">
@@ -21,30 +34,37 @@ export default function Navbar() {
 
                 <div className={`nav-menu ${open ? 'open' : ''}`}>
                     <div
-                        className="dropdown"
-                        onMouseEnter={() => setDropdownOpen(true)}
-                        onMouseLeave={() => setDropdownOpen(false)}
+                        className={`dropdown ${dropdownOpen ? 'dropdown-open' : ''}`}
+                        onMouseEnter={() => { if (window.innerWidth > 768) setDropdownOpen(true) }}
+                        onMouseLeave={() => { if (window.innerWidth > 768) setDropdownOpen(false) }}
                     >
-                        <a href="/#services" onClick={() => setOpen(false)}>Services</a>
+                        <a
+                            href="/#services"
+                            onClick={handleServicesClick}
+                            className="dropdown-trigger"
+                        >
+                            Services
+                            <span className={`dropdown-chevron ${dropdownOpen ? 'chevron-open' : ''}`}>›</span>
+                        </a>
                         {dropdownOpen && (
                             <div className="dropdown-menu">
                                 {services.map(s => (
-                                    <a key={s.id} href={`/services/${s.id}`} onClick={() => setOpen(false)}>
+                                    <a key={s.id} href={`/services/${s.id}`} onClick={closeAll}>
                                         {s.title}
                                     </a>
                                 ))}
                             </div>
                         )}
                     </div>
-                    <a href="/#work" onClick={() => setOpen(false)}>Work</a>
-                    <a href="/#about" onClick={() => setOpen(false)}>About</a>
-                    <a href="/#process" onClick={() => setOpen(false)}>Process</a>
-                    <a href="/#contact" onClick={() => setOpen(false)}>
+                    <a href="/#work" onClick={closeAll}>Work</a>
+                    <a href="/about" onClick={closeAll}>About</a>
+                    <a href="/#process" onClick={closeAll}>Process</a>
+                    <a href="/#contact" onClick={closeAll}>
                         <span className="nav-btn">Let's Talk</span>
                     </a>
                 </div>
 
-                <button className="nav-toggle" onClick={() => setOpen(!open)} aria-label="Menu">
+                <button className="nav-toggle" onClick={() => { setOpen(!open); setDropdownOpen(false) }} aria-label="Menu">
                     <span /><span /><span />
                 </button>
             </div>

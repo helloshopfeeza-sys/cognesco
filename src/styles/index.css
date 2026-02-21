@@ -2335,3 +2335,795 @@ button {
     margin-bottom: -20px;
   }
 }
+
+/* ==============================
+   DROPDOWN CHEVRON (all sizes)
+   ============================== */
+
+.dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-chevron {
+  display: inline-block;
+  font-size: 1.1rem;
+  transition: transform 0.3s var(--ease);
+  transform: rotate(0deg);
+  line-height: 1;
+}
+
+.chevron-open {
+  transform: rotate(90deg);
+}
+
+/* ==============================
+   COMPREHENSIVE MOBILE — 768px
+   (Tablets & Phones)
+   ============================== */
+
+@media (max-width: 768px) {
+
+  /* --- Global --- */
+  :root {
+    --section-gap: clamp(60px, 10vw, 100px);
+    --nav-height: 70px;
+  }
+
+  .wrap {
+    padding: 0 20px;
+  }
+
+  /* --- Navbar Mobile Menu Tweaks --- */
+  .nav {
+    padding: 16px 0;
+  }
+
+  .nav.pinned {
+    padding: 12px 0;
+  }
+
+  .nav-menu a {
+    font-size: 1.1rem;
+  }
+
+  .dropdown {
+    width: 100%;
+    padding: 0;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dropdown-trigger {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .dropdown-chevron {
+    font-size: 1.3rem;
+  }
+
+  .dropdown-menu {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    border-left: 2px solid var(--accent);
+    border-radius: 0;
+    padding: 8px 0 8px 16px;
+    margin-top: 8px;
+    background: transparent;
+    animation: none;
+    min-width: unset;
+  }
+
+  .dropdown-menu a {
+    padding: 10px 16px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .dropdown-menu a:hover {
+    padding-left: 20px;
+  }
+
+  .nav-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 28px;
+  }
+
+  /* --- Hero --- */
+  .hero {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .hero-title {
+    letter-spacing: -1.5px;
+    margin-bottom: 28px;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+    gap: 14px;
+  }
+
+  .btn-fill {
+    width: 100%;
+    justify-content: center;
+    padding: 16px 32px;
+  }
+
+  .btn-text {
+    justify-content: center;
+  }
+
+  .hero-line {
+    margin-top: 40px;
+  }
+
+  .hero-stats-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-stat-cell {
+    padding: 24px 0;
+  }
+
+  .hero-stat-cell h3 {
+    font-size: 1.8rem;
+  }
+
+  .hero-stat-cell p {
+    font-size: 0.7rem;
+  }
+
+  .hero-stat-cell:nth-child(2) {
+    border-right: none;
+  }
+
+  /* --- Marquee --- */
+  .marquee-track {
+    gap: 32px;
+  }
+
+  .marquee-item {
+    gap: 32px;
+    font-size: 0.75rem;
+  }
+
+  /* --- Services --- */
+  .services-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .svc-split {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .svc-names {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .svc-name {
+    padding: 18px 20px;
+    font-size: 1rem;
+  }
+
+  .svc-detail {
+    padding: 28px 20px;
+  }
+
+  .svc-metric-value {
+    font-size: 2.2rem;
+  }
+
+  .svc-detail-desc {
+    font-size: 0.88rem;
+  }
+
+  /* --- Portfolio --- */
+  .portfolio {
+    padding-bottom: 10vh;
+  }
+
+  .sticky-cards-container {
+    margin-top: 40px;
+  }
+
+  .sticky-card {
+    border-radius: 12px;
+    min-height: 60vh;
+  }
+
+  .card-inner.text-only {
+    padding: 40px 20px;
+  }
+
+  .card-title.text-only-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    letter-spacing: -1px;
+  }
+
+  .card-desc.text-only-desc {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+
+  .card-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 24px;
+  }
+
+  .card-meta {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* --- About (Home Section) --- */
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-left blockquote {
+    font-size: 1.2rem;
+  }
+
+  /* --- Process --- */
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
+  }
+
+  .process-cell {
+    padding: 28px 20px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .process-cell:nth-child(odd) {
+    border-left: none;
+  }
+
+  .process-cell-num {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+
+  /* --- Testimonials --- */
+  .testi-grid {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+
+  .testi-card {
+    padding: 28px 24px;
+    min-height: auto;
+  }
+
+  .testi-card blockquote {
+    font-size: 0.92rem;
+    margin-bottom: 24px;
+  }
+
+  /* --- CTA --- */
+  .cta-content {
+    max-width: 100%;
+    padding: 0 8px;
+  }
+
+  .cta-content h2 {
+    letter-spacing: -1px;
+  }
+
+  .cta-content p {
+    font-size: 0.92rem;
+    margin-bottom: 28px;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-actions .btn-fill,
+  .cta-actions .btn-text {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* --- Contact --- */
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-form-box {
+    padding: 28px 20px;
+  }
+
+  .form-2col {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Footer --- */
+  .footer {
+    padding: 40px 0 24px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  /* --- Horizontal Scroll --- */
+  .horizontal-scroll-section {
+    height: auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .horizontal-scroll-section::-webkit-scrollbar {
+    display: none;
+  }
+
+  .horizontal-sticky-container {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+
+  .horizontal-track {
+    transform: none !important;
+    padding: var(--section-gap) 20px;
+    height: auto;
+    gap: 40px;
+  }
+
+  .h-card {
+    width: 85vw !important;
+    scroll-snap-align: center;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .h-intro,
+  .h-outro {
+    height: auto;
+    min-height: 40vh;
+  }
+
+  .h-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 16px;
+  }
+
+  .h-subtitle {
+    font-size: 1rem;
+  }
+
+  .h-num {
+    font-size: clamp(4rem, 10vw, 7rem);
+    margin-bottom: 16px;
+  }
+
+  .h-principle-title {
+    font-size: 1.6rem;
+  }
+
+  .h-desc {
+    font-size: 1rem;
+  }
+
+  .scroll-indicator {
+    margin-top: 32px;
+  }
+
+  /* --- About Page (Dedicated) --- */
+  .about-page {
+    padding-top: var(--nav-height);
+  }
+
+  .about-hero {
+    padding: 4vh 0 6vh;
+  }
+
+  .about-hero-inner {
+    max-width: 100%;
+  }
+
+  .about-hero .hero-title {
+    font-size: clamp(2.2rem, 7vw, 3.5rem);
+    letter-spacing: -1px;
+  }
+
+  .about-hero-desc {
+    font-size: 1rem;
+    margin-top: 24px;
+  }
+
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .philosophy-text h2 {
+    margin-bottom: 24px;
+  }
+
+  .philosophy-text p {
+    font-size: 1rem;
+  }
+
+  .philosophy-image img {
+    aspect-ratio: 16/10;
+  }
+
+  .standard-header {
+    margin-bottom: 40px;
+  }
+
+  .standard-header h2 {
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    margin: 16px 0 20px;
+  }
+
+  .standard-header p {
+    font-size: 1rem;
+  }
+
+  .standard-item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 24px 0;
+  }
+
+  .standard-num {
+    font-size: 1.5rem;
+  }
+
+  .standard-item h3 {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+  }
+
+  .standard-item p {
+    font-size: 0.95rem;
+  }
+
+  .about-cta .section-heading {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+  }
+
+  /* --- Service Detail Page --- */
+  .detail-hero {
+    padding: 60px 0 40px;
+  }
+
+  .detail-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .detail-hero-desc {
+    font-size: 1rem;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .detail-body {
+    font-size: 1rem;
+  }
+
+  .detail-metric-box {
+    padding: 24px 28px;
+  }
+
+  .metric-val {
+    font-size: 2.2rem;
+  }
+
+  .tech-categories {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .detail-next {
+    padding: 60px 0;
+  }
+
+  .detail-next h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ==============================
+   COMPREHENSIVE MOBILE — 480px
+   (Small Phones — iPhone SE etc.)
+   ============================== */
+
+@media (max-width: 480px) {
+
+  /* --- Global --- */
+  :root {
+    --section-gap: clamp(48px, 8vw, 80px);
+  }
+
+  .wrap {
+    padding: 0 16px;
+  }
+
+  /* --- Hero --- */
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 10vw, 3.5rem);
+    letter-spacing: -1px;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+
+  .hero-stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stat-cell {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+
+  .hero-stat-cell:last-child {
+    border-bottom: none;
+  }
+
+  .hero-stat-cell h3 {
+    font-size: 1.6rem;
+  }
+
+  .btn-fill {
+    padding: 14px 24px;
+    font-size: 0.82rem;
+  }
+
+  /* --- Services --- */
+  .svc-name {
+    padding: 14px 16px;
+    font-size: 0.9rem;
+    gap: 12px;
+  }
+
+  .svc-detail {
+    padding: 24px 16px;
+    gap: 20px;
+  }
+
+  .svc-metric-value {
+    font-size: 1.8rem;
+  }
+
+  .svc-detail-desc {
+    font-size: 0.85rem;
+  }
+
+  /* --- Portfolio --- */
+  .sticky-card {
+    min-height: 50vh;
+    border-radius: 8px;
+  }
+
+  .card-title.text-only-title {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+    letter-spacing: -0.5px;
+  }
+
+  .card-desc.text-only-desc {
+    font-size: 0.88rem;
+  }
+
+  .card-tag,
+  .card-location {
+    font-size: 0.72rem;
+    letter-spacing: 1px;
+  }
+
+  /* --- Process --- */
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-cell {
+    border-left: none !important;
+    padding: 24px 16px;
+  }
+
+  .process-cell-num {
+    font-size: 1.8rem;
+  }
+
+  /* --- Testimonials --- */
+  .testi-card {
+    padding: 24px 20px;
+  }
+
+  .testi-card blockquote {
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  /* --- Contact --- */
+  .contact-form-box {
+    padding: 24px 16px;
+  }
+
+  .field input,
+  .field textarea,
+  .field select {
+    padding: 12px 14px;
+    font-size: 0.85rem;
+  }
+
+  .submit-btn {
+    padding: 16px;
+    font-size: 0.82rem;
+  }
+
+  /* --- Footer --- */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-brand-text {
+    max-width: 100%;
+  }
+
+  /* --- About Page --- */
+  .about-hero .hero-title {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  .about-hero-desc {
+    font-size: 0.9rem;
+  }
+
+  .philosophy-text h2 {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+  }
+
+  .philosophy-text p {
+    font-size: 0.92rem;
+  }
+
+  .standard-header h2 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  .standard-header p {
+    font-size: 0.92rem;
+  }
+
+  .standard-num {
+    font-size: 1.3rem;
+  }
+
+  .standard-item h3 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+  }
+
+  .standard-item p {
+    font-size: 0.88rem;
+  }
+
+  /* --- Service Detail --- */
+  .detail-hero {
+    padding: 40px 0 28px;
+  }
+
+  .back-link {
+    margin-bottom: 24px;
+  }
+
+  .detail-title {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+
+  .detail-hero-desc {
+    font-size: 0.9rem;
+  }
+
+  .detail-body {
+    font-size: 0.92rem;
+  }
+
+  .detail-metric-box {
+    padding: 20px 24px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .metric-val {
+    font-size: 1.8rem;
+  }
+
+  .tech-item-pill {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+  }
+
+  .detail-next {
+    padding: 40px 0;
+  }
+
+  .detail-next h2 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+
+  /* --- Horizontal Scroll Mobile --- */
+  .h-card {
+    width: 90vw !important;
+  }
+
+  .h-title {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+
+  .h-num {
+    font-size: clamp(3rem, 12vw, 5rem);
+  }
+
+  .h-principle-title {
+    font-size: 1.3rem;
+  }
+
+  .h-desc {
+    font-size: 0.88rem;
+  }
+}
