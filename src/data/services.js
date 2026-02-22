@@ -1,7 +1,7 @@
 import {
     SiReact, SiNextdotjs, SiNodedotjs, SiPython, SiJavascript, SiHtml5, SiCss3,
     SiFirebase, SiSupabase, SiKotlin, SiSwift, SiFlutter, SiAndroid, SiShopify, SiStripe, SiFigma,
-    SiAngular, SiVuedotjs, SiDjango
+    SiAngular, SiVuedotjs, SiDjango, SiVite
 } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa'
 import { MdOutlinePayments, MdInventory } from 'react-icons/md'
@@ -17,7 +17,7 @@ export const services = [
         desc: 'Our web development process is rooted in building scalable, future-proof architectures. We specialize in headless CMS integrations, statically generated platforms (SSG), and server-side rendered (SSR) applications that dramatically improve SEO and initial load times.\n\nFrom marketing sites with complex, scroll-synchronized animations to robust data-driven web platforms, we ensure every line of code serves a purpose. We prioritize Core Web Vitals, adhering strictly to WCAG 2.1 accessibility standards, and ensuring a flawless, responsive experience across all viewports and devices.',
         metric: '3x',
         metricLabel: 'faster load times',
-        tech: ['React', 'Angular', 'Vue.js', 'Node.js', 'Python', 'Django', 'Java'],
+        tech: ['React', 'Angular', 'Vue.js', 'Vite', 'Node.js', 'Python', 'Django', 'Java'],
         techDetails: [
             {
                 category: 'Frontend',
@@ -25,6 +25,7 @@ export const services = [
                     { name: 'React', icon: SiReact },
                     { name: 'Angular', icon: SiAngular },
                     { name: 'Vue.js', icon: SiVuedotjs },
+                    { name: 'Vite', icon: SiVite },
                     { name: 'Next.js', icon: SiNextdotjs },
                     { name: 'JavaScript', icon: SiJavascript },
                     { name: 'HTML', icon: SiHtml5 },
@@ -95,14 +96,15 @@ export const services = [
         desc: 'We build digital web commerce platforms designed with a singular focus: maximizing conversion rates and average order value. For enterprise clients requiring specialized logic, we engineer entirely custom full-stack web solutions with deeply integrated third-party APIs, custom routing, and proprietary inventory algorithms.\n\nFor brands leveraging the Shopify ecosystem, we go far beyond theme customization. We build headless Shopify architectures and custom Liquid sections, empowering your marketing team to control the visual narrative without sacrificing the robust, secure backend that Shopify provides. Every storefront is fiercely optimized for mobile checkout and sub-second page loads.',
         metric: '2.8x',
         metricLabel: 'revenue increase avg.',
-        tech: ['Shopify', 'Liquid', 'Stripe', 'Node.js', 'React', 'Angular', 'Vue.js', 'Django', 'Java'],
+        tech: ['Shopify', 'Liquid', 'Stripe', 'Node.js', 'React', 'Angular', 'Vue.js', 'Vite', 'Django', 'Java'],
         techDetails: [
             {
                 category: 'Frontend',
                 items: [
                     { name: 'React', icon: SiReact },
                     { name: 'Angular', icon: SiAngular },
-                    { name: 'Vue.js', icon: SiVuedotjs }
+                    { name: 'Vue.js', icon: SiVuedotjs },
+                    { name: 'Vite', icon: SiVite }
                 ]
             },
             {
