@@ -44,25 +44,31 @@ export default function Contact() {
                         <div className="form-2col">
                             <div className="field">
                                 <label htmlFor="name">Name</label>
-                                <input type="text" id="name" placeholder="Your name" required />
+                                <input type="text" id="name" name="name" placeholder="Your name" required />
                             </div>
                             <div className="field">
                                 <label htmlFor="email">Email</label>
-                                <input type="email" id="email" placeholder="you@company.com" required />
+                                <input type="email" id="email" name="email" placeholder="you@company.com" required />
                             </div>
                         </div>
 
-                        <div className="field">
-                            <label htmlFor="service">Service</label>
-                            <select id="service">
-                                <option value="">Select a service...</option>
-                                <option>Web Development</option>
-                                <option>Mobile App</option>
-                                <option>UI/UX Design</option>
-                                <option>E-Commerce</option>
-                                <option>SaaS Platform</option>
-                                <option>Other</option>
-                            </select>
+                        <div className="form-2col">
+                            <div className="field">
+                                <label htmlFor="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" />
+                            </div>
+                            <div className="field">
+                                <label htmlFor="service">Service</label>
+                                <select id="service" name="service">
+                                    <option value="">Select a service...</option>
+                                    <option>Web Development</option>
+                                    <option>Mobile App</option>
+                                    <option>UI/UX Design</option>
+                                    <option>E-Commerce</option>
+                                    <option>SaaS Platform</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div className="field">
