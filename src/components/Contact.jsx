@@ -20,7 +20,7 @@ export default function Contact() {
                         </h2>
                         <h3>Ready to start?</h3>
                         <p>
-                            Send us a message and {"we'll"} respond within 24 hours.
+                            Send us a message and {"we'll"} respond within the next 6 hours.
                             Rough idea or detailed spec — either works.
                         </p>
 
