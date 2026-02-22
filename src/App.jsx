@@ -6,6 +6,7 @@ import ServicesPage from './pages/ServicesPage'
 import WorkPage from './pages/WorkPage'
 import ProcessPage from './pages/ProcessPage'
 import ContactPage from './pages/ContactPage'
+import FAQPage from './pages/FAQPage'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/services/:serviceId" element={<ServiceDetail />} />
         <Route path="/work" element={<WorkPage />} />
         <Route path="/process" element={<ProcessPage />} />
+        <Route path="/faq" element={<FAQPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>

@@ -56,7 +56,7 @@ export const services = [
         desc: 'We engineer mobile applications that feel truly native, hyper-responsive, and deeply integrated with device hardware. Whether you need a cross-platform solution using Flutter or React Native for rapid market entry, or specialized native apps leveraging the latest Android SDK and iOS frameworks, we build architectures designed to handle millions of active users.\n\nOur mobile development lifecycle includes rigorous UI/UX testing on physical devices, aggressive memory management profiling, and offline-first data synchronization strategies to ensure your app performs flawlessly even in low-connectivity environments.',
         metric: '25+',
         metricLabel: 'apps shipped',
-        tech: ['Kotlin', 'Swift', 'Flutter', 'React Native'],
+        tech: ['Kotlin', 'Swift', 'Flutter', 'React Native', 'Django', 'Java', 'Node.js'],
         techDetails: [
             {
                 category: 'Native & Cross-Platform',
@@ -71,10 +71,12 @@ export const services = [
                 ]
             },
             {
-                category: 'Backend',
+                category: 'Backend APIs',
                 items: [
                     { name: 'Node.js', icon: SiNodedotjs },
-                    { name: 'Python', icon: SiPython }
+                    { name: 'Python', icon: SiPython },
+                    { name: 'Django', icon: SiDjango },
+                    { name: 'Java', icon: FaJava }
                 ]
             },
             {
@@ -93,8 +95,24 @@ export const services = [
         desc: 'We build digital web commerce platforms designed with a singular focus: maximizing conversion rates and average order value. For enterprise clients requiring specialized logic, we engineer entirely custom full-stack web solutions with deeply integrated third-party APIs, custom routing, and proprietary inventory algorithms.\n\nFor brands leveraging the Shopify ecosystem, we go far beyond theme customization. We build headless Shopify architectures and custom Liquid sections, empowering your marketing team to control the visual narrative without sacrificing the robust, secure backend that Shopify provides. Every storefront is fiercely optimized for mobile checkout and sub-second page loads.',
         metric: '2.8x',
         metricLabel: 'revenue increase avg.',
-        tech: ['Shopify', 'Liquid', 'Stripe', 'Node.js'],
+        tech: ['Shopify', 'Liquid', 'Stripe', 'Node.js', 'React', 'Angular', 'Vue.js', 'Django', 'Java'],
         techDetails: [
+            {
+                category: 'Frontend',
+                items: [
+                    { name: 'React', icon: SiReact },
+                    { name: 'Angular', icon: SiAngular },
+                    { name: 'Vue.js', icon: SiVuedotjs }
+                ]
+            },
+            {
+                category: 'Backend',
+                items: [
+                    { name: 'Node.js', icon: SiNodedotjs },
+                    { name: 'Django', icon: SiDjango },
+                    { name: 'Java', icon: FaJava }
+                ]
+            },
             {
                 category: 'Custom Full Stack',
                 items: [
@@ -119,7 +137,7 @@ export const services = [
         desc: 'Mobile commerce requires an entirely different approach than the web. We build hyper-optimized iOS and Android shopping applications that leverage native hardware for blisteringly fast product discovery, one-tap Apple Pay/Google Pay checkouts, and strategic push notification campaigns.\n\nOur E-commerce App architecture focuses heavily on offline-caching, smooth transition animations, and sub-second catalog rendering. Whether unifying your web backend with a React Native app or building a pure Swift/Kotlin native experience, we ensure your mobile app becomes your highest converting sales channel.',
         metric: '4.2x',
         metricLabel: 'mobile conversion rate',
-        tech: ['Swift', 'Kotlin', 'React Native', 'Firebase'],
+        tech: ['Swift', 'Kotlin', 'React Native', 'Firebase', 'Django', 'Java', 'Node.js'],
         techDetails: [
             {
                 category: 'Native & Cross-Platform',
@@ -130,7 +148,15 @@ export const services = [
                 ]
             },
             {
-                category: 'Backend & Data',
+                category: 'Backend APIs',
+                items: [
+                    { name: 'Django', icon: SiDjango },
+                    { name: 'Java', icon: FaJava },
+                    { name: 'Node.js', icon: SiNodedotjs }
+                ]
+            },
+            {
+                category: 'Cloud & Services',
                 items: [
                     { name: 'Firebase', icon: SiFirebase },
                     { name: 'Payment Integrations', icon: MdOutlinePayments }
