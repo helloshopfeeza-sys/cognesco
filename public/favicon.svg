@@ -4,9 +4,9 @@
     text {
       font-family: 'Syne', system-ui, -apple-system, sans-serif;
       font-weight: 700;
-      font-size: 75px;
+      font-size: 85px;
     }
   </style>
   <rect width="100" height="100" rx="24" fill="#111111" />
-  <text x="50" y="74" fill="#f0ede8" text-anchor="middle">c<tspan fill="#e8553d">.</tspan></text>
+  <text x="50" y="78" fill="#f0ede8" text-anchor="middle">c<tspan fill="#e8553d">.</tspan></text>
 </svg>
