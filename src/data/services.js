@@ -49,7 +49,7 @@ export const services = [
         title: 'Mobile Applications',
         heroDesc: 'High-performance native and cross-platform applications for iOS and Android. From initial concept and UX prototyping through App Store launch and post-release support.',
         desc: 'We engineer mobile applications that feel truly native, hyper-responsive, and deeply integrated with device hardware. Whether you need a cross-platform solution using Flutter or React Native for rapid market entry, or specialized native apps leveraging the latest Android SDK and iOS frameworks, we build architectures designed to handle millions of active users.\n\nOur mobile development lifecycle includes rigorous UI/UX testing on physical devices, aggressive memory management profiling, and offline-first data synchronization strategies to ensure your app performs flawlessly even in low-connectivity environments.',
-        metric: '40+',
+        metric: '25+',
         metricLabel: 'apps shipped',
         tech: ['Kotlin', 'Swift', 'Flutter', 'React Native'],
         techDetails: [

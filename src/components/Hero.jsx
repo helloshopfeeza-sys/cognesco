@@ -56,7 +56,7 @@ export default function Hero() {
             <div className="hero-stats-row">
                 <StatCell value="50" suffix="+" label="Projects Shipped" />
                 <StatCell value="98" suffix="%" label="Client Retention" />
-                <StatCell value="4" suffix=" yrs" label="In Business" />
+                <StatCell value="5" suffix="+" label="Years Experience" />
                 <StatCell value="12" suffix="" label="Team Members" />
             </div>
         </section>
