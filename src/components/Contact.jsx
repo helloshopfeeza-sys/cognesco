@@ -31,7 +31,7 @@ export default function Contact() {
                             </div>
                             <div className="contact-entry">
                                 <div className="contact-entry-icon">☎</div>
-                                <span>+94 71 629 2128</span>
+                                <span>+94 77 685 9294</span>
                             </div>
                             <div className="contact-entry">
                                 <div className="contact-entry-icon">⌖</div>
