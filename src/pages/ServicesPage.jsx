@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import SEO from '../components/SEO'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Services from '../components/Services'
@@ -24,6 +25,11 @@ export default function ServicesPage() {
 
     return (
         <div className="page-wrapper">
+            <SEO
+                title="Our Services | Full Stack Development Sri Lanka"
+                description="We offer custom web development, mobile app development, e-commerce solutions, and UI/UX design services to businesses in Sri Lanka and worldwide."
+                url="https://cognescosolutions.com/services"
+            />
             <Navbar />
             <main style={{ paddingTop: '120px', minHeight: '80vh' }}>
                 <Services />

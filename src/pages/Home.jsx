@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import SEO from '../components/SEO'
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Marquee from '../components/Marquee'
@@ -36,6 +37,11 @@ export default function Home() {
 
     return (
         <>
+            <SEO
+                title="Top Web & Mobile App Development Sri Lanka"
+                description="Cognesco Solutions is a premium digital agency in Sri Lanka specializing in high-performance web development, mobile applications, and UX/UI design."
+                url="https://cognescosolutions.com/"
+            />
             <Navbar />
             <main>
                 <Hero />

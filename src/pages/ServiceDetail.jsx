@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useParams, Navigate, Link } from 'react-router-dom'
+import SEO from '../components/SEO'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { services } from '../data/services'
@@ -32,6 +33,11 @@ export default function ServiceDetail() {
 
     return (
         <>
+            <SEO
+                title={`${service.title} Sri Lanka`}
+                description={service.heroDesc}
+                url={`https://cognescosolutions.com/services/${serviceId}`}
+            />
             <Navbar />
             <main className="service-detail-page">
                 {/* Header Section */}

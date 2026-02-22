@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import SEO from '../components/SEO'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import SplitTextLines from '../components/SplitTextLines'
@@ -38,6 +39,11 @@ export default function AboutPage() {
 
     return (
         <div className="page-wrapper">
+            <SEO
+                title="About Us | Digital Agency Sri Lanka"
+                description="We are Cognesco Solutions, a Sri Lanka based independent digital agency engineering custom web and mobile applications for ambitious brands."
+                url="https://cognescosolutions.com/about"
+            />
             <Navbar />
 
             <main className="about-page">

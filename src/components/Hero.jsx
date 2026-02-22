@@ -37,9 +37,10 @@ export default function Hero() {
 
                 <div className="hero-bottom">
                     <p className="hero-desc">
-                        Cognesco Solutions partners with ambitious brands to create
-                        websites and applications that look exceptional, perform
-                        flawlessly, and drive real results.
+                        Cognesco Solutions is a leading digital agency in Sri Lanka.
+                        We partner with ambitious brands to engineer high-performance
+                        web development and mobile app development solutions that
+                        drive real results.
                     </p>
 
                     <div className="hero-cta-group">

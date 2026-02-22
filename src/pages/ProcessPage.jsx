@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import SEO from '../components/SEO'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Process from '../components/Process'
@@ -24,6 +25,11 @@ export default function ProcessPage() {
 
     return (
         <div className="page-wrapper">
+            <SEO
+                title="Our Process | How We Build Software"
+                description="Learn about our rigorous engineering process, from user research and wireframing to agile development, testing, and successful product deployment."
+                url="https://cognescosolutions.com/process"
+            />
             <Navbar />
             <main style={{ paddingTop: '120px', minHeight: '80vh' }}>
                 <Process />
