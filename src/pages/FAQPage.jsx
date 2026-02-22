@@ -19,7 +19,7 @@ export default function FAQPage() {
             />
             <Navbar />
 
-            <main style={{ paddingTop: '120px', minHeight: '80vh', paddingBottom: '80px' }}>
+            <main style={{ paddingTop: '120px' }}>
                 <FAQ />
             </main>
 

@@ -9,7 +9,7 @@ export const faqs = [
     },
     {
         question: 'How long does it take to build a website or app?',
-        answer: 'A standard marketing website usually takes between 4 to 8 weeks to design and develop. Complex e-commerce platforms or custom native mobile applications can take anywhere from 3 to 6 months depending on the features, integration requirements, and testing phases.'
+        answer: 'Our work takes 3 days minimum to 60 days maximum depending on the project.'
     },
     {
         question: 'Do you work with international clients?',
