@@ -9,12 +9,6 @@ export default function Footer() {
                             Crafting digital products for ambitious brands.
                             Websites, apps, and everything in between.
                         </p>
-                        <div className="footer-socials">
-                            <a href="#" className="footer-social" aria-label="Twitter">𝕏</a>
-                            <a href="#" className="footer-social" aria-label="LinkedIn">in</a>
-                            <a href="#" className="footer-social" aria-label="GitHub">GH</a>
-                            <a href="#" className="footer-social" aria-label="Dribbble">Dr</a>
-                        </div>
                     </div>
 
                     <div className="footer-col">
