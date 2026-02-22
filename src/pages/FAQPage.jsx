@@ -8,6 +8,28 @@ import CtaBanner from '../components/CtaBanner'
 export default function FAQPage() {
     useEffect(() => {
         window.scrollTo(0, 0)
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible')
+                    }
+                })
+            },
+            { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
+        )
+
+        const timeoutId = setTimeout(() => {
+            document.querySelectorAll('.sr, .fade-left, .fade-right, .clip-reveal').forEach((el) => {
+                observer.observe(el)
+            })
+        }, 100)
+
+        return () => {
+            clearTimeout(timeoutId)
+            observer.disconnect()
+        }
     }, [])
 
     return (
