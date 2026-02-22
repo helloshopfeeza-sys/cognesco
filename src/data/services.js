@@ -1,6 +1,7 @@
 import {
     SiReact, SiNextdotjs, SiNodedotjs, SiPython, SiJavascript, SiHtml5, SiCss3,
-    SiFirebase, SiSupabase, SiKotlin, SiSwift, SiFlutter, SiAndroid, SiShopify, SiStripe, SiFigma
+    SiFirebase, SiSupabase, SiKotlin, SiSwift, SiFlutter, SiAndroid, SiShopify, SiStripe, SiFigma,
+    SiAngular, SiVuedotjs, SiDjango
 } from 'react-icons/si'
 import { FaJava } from 'react-icons/fa'
 import { MdOutlinePayments, MdInventory } from 'react-icons/md'
@@ -16,12 +17,14 @@ export const services = [
         desc: 'Our web development process is rooted in building scalable, future-proof architectures. We specialize in headless CMS integrations, statically generated platforms (SSG), and server-side rendered (SSR) applications that dramatically improve SEO and initial load times.\n\nFrom marketing sites with complex, scroll-synchronized animations to robust data-driven web platforms, we ensure every line of code serves a purpose. We prioritize Core Web Vitals, adhering strictly to WCAG 2.1 accessibility standards, and ensuring a flawless, responsive experience across all viewports and devices.',
         metric: '3x',
         metricLabel: 'faster load times',
-        tech: ['React', 'Next.js', 'Node.js', 'Python'],
+        tech: ['React', 'Angular', 'Vue.js', 'Node.js', 'Python', 'Django', 'Java'],
         techDetails: [
             {
                 category: 'Frontend',
                 items: [
                     { name: 'React', icon: SiReact },
+                    { name: 'Angular', icon: SiAngular },
+                    { name: 'Vue.js', icon: SiVuedotjs },
                     { name: 'Next.js', icon: SiNextdotjs },
                     { name: 'JavaScript', icon: SiJavascript },
                     { name: 'HTML', icon: SiHtml5 },
@@ -32,7 +35,9 @@ export const services = [
                 category: 'Backend',
                 items: [
                     { name: 'Node.js', icon: SiNodedotjs },
-                    { name: 'Python', icon: SiPython }
+                    { name: 'Python', icon: SiPython },
+                    { name: 'Django', icon: SiDjango },
+                    { name: 'Java', icon: FaJava }
                 ]
             },
             {
