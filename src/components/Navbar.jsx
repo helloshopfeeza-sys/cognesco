@@ -39,7 +39,7 @@ export default function Navbar() {
                         onMouseLeave={() => { if (window.innerWidth > 768) setDropdownOpen(false) }}
                     >
                         <a
-                            href="/#services"
+                            href="/services"
                             onClick={handleServicesClick}
                             className="dropdown-trigger"
                         >
@@ -56,10 +56,10 @@ export default function Navbar() {
                             </div>
                         )}
                     </div>
-                    <a href="/#work" onClick={closeAll}>Work</a>
+                    <a href="/work" onClick={closeAll}>Work</a>
                     <a href="/about" onClick={closeAll}>About</a>
-                    <a href="/#process" onClick={closeAll}>Process</a>
-                    <a href="/#contact" onClick={closeAll}>
+                    <a href="/process" onClick={closeAll}>Process</a>
+                    <a href="/contact" onClick={closeAll}>
                         <span className="nav-btn">Let's Talk</span>
                     </a>
                 </div>

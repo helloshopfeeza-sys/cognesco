@@ -19,18 +19,18 @@ export default function Footer() {
 
                     <div className="footer-col">
                         <h4>Services</h4>
-                        <a href="#services">Web Development</a>
-                        <a href="#services">Mobile Apps</a>
-                        <a href="#services">UI/UX Design</a>
-                        <a href="#services">E-Commerce</a>
+                        <a href="/services">Web Development</a>
+                        <a href="/services">Mobile Apps</a>
+                        <a href="/services">UI/UX Design</a>
+                        <a href="/services">E-Commerce</a>
                     </div>
 
                     <div className="footer-col">
                         <h4>Company</h4>
-                        <a href="#about">About</a>
-                        <a href="#work">Work</a>
-                        <a href="#process">Process</a>
-                        <a href="#contact">Contact</a>
+                        <a href="/about">About</a>
+                        <a href="/work">Work</a>
+                        <a href="/process">Process</a>
+                        <a href="/contact">Contact</a>
                     </div>
 
                     <div className="footer-col">
