@@ -988,6 +988,41 @@ button {
   }
 }
 
+@media (max-width: 768px) {
+  .wcu-premium-section {
+    padding: 80px 0;
+  }
+
+  .wcu-main-title {
+    font-size: 2.2rem;
+  }
+
+  .wcu-feature-card {
+    padding: 24px 0;
+  }
+
+  .wcu-number {
+    font-size: 3.5rem;
+  }
+
+  .wcu-icon-box svg {
+    width: 36px;
+    height: 36px;
+  }
+
+  .wcu-feature-title {
+    font-size: 1.5rem;
+  }
+
+  .wcu-feature-desc {
+    font-size: 0.95rem;
+  }
+
+  .wcu-divider {
+    margin-top: 40px;
+  }
+}
+
 .svc-name-text {
   flex: 1;
   transition:
