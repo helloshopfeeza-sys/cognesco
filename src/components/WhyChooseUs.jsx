@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import { HiOutlineSparkles, HiOutlineBriefcase, HiOutlineRocketLaunch } from 'react-icons/hi2'
+import { HiOutlineLightBulb, HiOutlineBriefcase, HiOutlineRocketLaunch } from 'react-icons/hi2'
 
 export default function WhyChooseUs() {
     const sectionRef = useRef(null)
@@ -28,11 +28,11 @@ export default function WhyChooseUs() {
             num: "01",
             title: "Bespoke, Premium Design.",
             desc: "Forget generic drag-and-drop templates. Every digital experience we engineer is strictly custom-built from the ground up. We blend modern aesthetics with fluid micro-animations and next-generation architecture to make your brand impossible to ignore.",
-            icon: <HiOutlineSparkles size={48} />
+            icon: <HiOutlineLightBulb size={48} />
         },
         {
             num: "02",
-            title: "Small Business Launchpads.",
+            title: "Small Business Solution.",
             desc: "World-class design shouldn't be gated behind enterprise budgets. We offer heavily subsidized, highly tailored packages explicitly for small businesses and home startups—giving you a Fortune 500 look right out of the gate without the agency price tag.",
             icon: <HiOutlineBriefcase size={48} />
         },
