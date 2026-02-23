@@ -16,9 +16,11 @@ export default function BlogPost() {
         const foundPost = blogPosts.find(p => p.id === slug)
         setPost(foundPost)
         setLoading(false)
+    }, [slug])
 
-        if (foundPost) {
-            // Trigger scroll animations
+    useEffect(() => {
+        if (!loading && post) {
+            // Trigger scroll animations after render
             const observer = new IntersectionObserver(
                 (entries) => entries.forEach(e => {
                     if (e.isIntersecting) e.target.classList.add('is-visible')
@@ -26,13 +28,17 @@ export default function BlogPost() {
                 { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
             )
 
-            requestAnimationFrame(() => {
+            // Small delay ensures DOM nodes are painted before observing
+            const timeoutId = setTimeout(() => {
                 document.querySelectorAll('.sr').forEach(el => observer.observe(el))
-            })
+            }, 50)
 
-            return () => observer.disconnect()
+            return () => {
+                clearTimeout(timeoutId)
+                observer.disconnect()
+            }
         }
-    }, [slug])
+    }, [loading, post])
 
     if (loading) return <div className="page-wrapper min-h-screen"></div>
     if (!post) return <Navigate to="/404" />
