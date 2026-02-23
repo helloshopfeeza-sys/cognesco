@@ -14,7 +14,9 @@ const dynamicRoutes = [
   '/services/mobile-applications',
   '/services/ecommerce-web',
   '/services/ecommerce-app',
-  '/services/ui-ux-design'
+  '/services/ui-ux-design',
+  '/blog',
+  '/blog/custom-web-development-vs-templates'
 ]
 
 // https://vite.dev/config/

@@ -60,6 +60,7 @@ export default function Navbar() {
                     <a href="/about" onClick={closeAll}>About</a>
                     <a href="/process" onClick={closeAll}>Process</a>
                     <a href="/faq" onClick={closeAll}>FAQ</a>
+                    <a href="/blog" onClick={closeAll}>Blog</a>
                     <a href="/contact" onClick={closeAll}>
                         <span className="nav-btn">Let's Talk</span>
                     </a>
