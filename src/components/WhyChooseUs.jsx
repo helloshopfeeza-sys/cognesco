@@ -1,55 +1,79 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { HiOutlineSparkles, HiOutlineBriefcase, HiOutlineRocketLaunch } from 'react-icons/hi2'
 
 export default function WhyChooseUs() {
-    const reasons = [
+    const sectionRef = useRef(null)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible')
+                    }
+                })
+            },
+            { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
+        )
+
+        const elements = sectionRef.current?.querySelectorAll('.sr-wcu')
+        elements?.forEach((el) => observer.observe(el))
+
+        return () => observer.disconnect()
+    }, [])
+
+    const advantages = [
         {
-            icon: <HiOutlineSparkles size={32} />,
-            title: "Bespoke, Premium Design",
-            desc: "Our websites and apps are never built from generic, basic templates. Every project is uniquely engineered with modern aesthetics, smooth micro-animations, and the latest tech to make your brand unforgettable."
+            num: "01",
+            title: "Bespoke, Premium Design.",
+            desc: "Forget generic drag-and-drop templates. Every digital experience we engineer is strictly custom-built from the ground up. We blend modern aesthetics with fluid micro-animations and next-generation architecture to make your brand impossible to ignore.",
+            icon: <HiOutlineSparkles size={48} />
         },
         {
-            icon: <HiOutlineBriefcase size={32} />,
-            title: "Small Business Solutions",
-            desc: "World-class design shouldn't be limited to enterprises. We offer specialized, significantly cheaper packages tailored for small businesses and home businesses just starting out—giving you a competitive edge from day one."
+            num: "02",
+            title: "Small Business Launchpads.",
+            desc: "World-class design shouldn't be gated behind enterprise budgets. We offer heavily subsidized, highly tailored packages explicitly for small businesses and home startups—giving you a Fortune 500 look right out of the gate without the agency price tag.",
+            icon: <HiOutlineBriefcase size={48} />
         },
         {
-            icon: <HiOutlineRocketLaunch size={32} />,
-            title: "Engineered for Growth",
-            desc: "Beyond stunning looks, our solutions are built on highly scalable, secure, and lightning-fast architectures. We prioritize Core Web Vitals and technical SEO to ensure your digital presence is a powerful growth engine."
+            num: "03",
+            title: "Engineered for Conversion.",
+            desc: "Beautiful design means nothing if it doesn't convert. Our solutions are built on highly scalable, secure, and lightning-fast infrastructures. We maniacally prioritize Core Web Vitals, technical SEO, and frictionless user journeys to turn your traffic into revenue.",
+            icon: <HiOutlineRocketLaunch size={48} />
         }
     ]
 
     return (
-        <section className="why-choose-us section">
-            <div className="wrap">
-                <div className="section-head text-center sr">
-                    <span className="accent section-tag">The Cognesco Advantage</span>
-                    <h2 className="section-heading mt-4">Why Choose Us?</h2>
-                    <p className="section-desc mt-6 mx-auto">
-                        We blur the lines between high-end digital art and robust software engineering, delivering tailored solutions for businesses of all sizes.
-                    </p>
+        <section className="wcu-premium-section" ref={sectionRef}>
+            <div className="wrap wcu-premium-wrap">
+                <div className="wcu-premium-left">
+                    <div className="wcu-sticky-content sr-wcu">
+                        <span className="wcu-tag">The Cognesco Advantage</span>
+                        <h2 className="wcu-main-title">Why partner with us?</h2>
+                        <p className="wcu-main-desc">
+                            We don't just build websites. We engineer high-performance digital ecosystems designed to dominate your market.
+                        </p>
+                        <Link to="/contact" className="wcu-cta btn-fill">
+                            <span>Discuss Your Vision</span>
+                        </Link>
+                    </div>
                 </div>
 
-                <div className="wcu-grid mt-20">
-                    {reasons.map((reason, idx) => (
-                        <div key={idx} className="wcu-card sr" style={{ transitionDelay: `${idx * 150}ms` }}>
-                            <div className="wcu-icon-wrapper">
-                                {reason.icon}
+                <div className="wcu-premium-right">
+                    {advantages.map((adv, idx) => (
+                        <div key={idx} className="wcu-feature-card sr-wcu" style={{ transitionDelay: `${idx * 150}ms` }}>
+                            <div className="wcu-feature-header">
+                                <span className="wcu-number">{adv.num}</span>
+                                <div className="wcu-icon-box">{adv.icon}</div>
                             </div>
-                            <h3 className="wcu-title">{reason.title}</h3>
-                            <p className="wcu-desc">{reason.desc}</p>
+                            <h3 className="wcu-feature-title">{adv.title}</h3>
+                            <p className="wcu-feature-desc">{adv.desc}</p>
+                            {idx !== advantages.length - 1 && <div className="wcu-divider"></div>}
                         </div>
                     ))}
                 </div>
-
-                <div className="wcu-cta-row mt-16 text-center sr">
-                    <Link to="/contact" className="btn-fill">
-                        <span>Get Your Custom Quote</span>
-                    </Link>
-                </div>
             </div>
-        </section >
+        </section>
     )
 }

@@ -13,10 +13,13 @@ export default function Footer() {
 
                     <div className="footer-col">
                         <h4>Services</h4>
-                        <a href="/services">Web Development</a>
-                        <a href="/services">Mobile Apps</a>
-                        <a href="/services">UI/UX Design</a>
-                        <a href="/services">E-Commerce</a>
+                        <a href="/services/web-development">Web Development</a>
+                        <a href="/services/mobile-applications">Mobile Apps</a>
+                        <a href="/services/ecommerce-web">E-Commerce Web</a>
+                        <a href="/services/ui-ux-design">UI/UX Design</a>
+                        <a href="/services/cms-development">CMS Solutions</a>
+                        <a href="/services/seo-optimization">SEO Optimization</a>
+                        <a href="/services/web-app-maintenance">App Maintenance</a>
                     </div>
 
                     <div className="footer-col">
