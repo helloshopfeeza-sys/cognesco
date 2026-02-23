@@ -190,5 +190,80 @@ export const services = [
                 ]
             }
         ]
+    },
+    {
+        id: 'cms-development',
+        title: 'CMS Web Development',
+        heroDesc: 'Empower your marketing team with highly customized, scalable, and easy-to-manage Content Management Systems built on WordPress, Webflow, and Headless architectures.',
+        desc: 'We go beyond basic template installations. Our CMS web development services are focused on creating deeply integrated, highly performant content platforms. Whether you need an extremely tailored WordPress architecture with custom post types and advanced custom fields, a pixel-perfect Webflow implementation, or a decoupled Headless CMS like Sanity or Contentful driven by a React frontend, we build systems that scale.\n\nOur approach ensures that your content editors have a seamless, intuitive publishing experience while the frontend delivers blistering fast performance and perfect Core Web Vitals for your end-users.',
+        metric: '100%',
+        metricLabel: 'custom workflows',
+        tech: ['WordPress', 'Webflow', 'Sanity', 'Contentful', 'React'],
+        techDetails: [
+            {
+                category: 'Traditional CMS',
+                items: [
+                    { name: 'WordPress', icon: SiNodedotjs },
+                    { name: 'Webflow', icon: SiHtml5 }
+                ]
+            },
+            {
+                category: 'Headless CMS',
+                items: [
+                    { name: 'Sanity', icon: SiReact },
+                    { name: 'Contentful', icon: SiNodedotjs }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'seo-optimization',
+        title: 'SEO Optimization',
+        heroDesc: 'Data-driven, technical, and on-page SEO strategies engineered to dominate search engine results pages, drive organic traffic, and dramatically lower customer acquisition costs.',
+        desc: 'Search Engine Optimization is no longer just about stuffing keywords. We employ a deeply technical approach to SEO, focusing on site architecture, crawl depth analysis, schema markup implementation, and rigorous Core Web Vitals optimization. Our strategies are built to align with the latest Google algorithm updates and ranking factors.\n\nFrom comprehensive technical audits to high-converting content strategy and localized search dominance, we ensure your digital properties are perfectly understood and prioritized by search engines, resulting in sustainable, compounding organic growth for your brand.',
+        metric: 'Top 3',
+        metricLabel: 'ranking targets',
+        tech: ['Google Analytics', 'Search Console', 'Ahrefs', 'Semrush', 'Technical SEO'],
+        techDetails: [
+            {
+                category: 'Analytics & Tracking',
+                items: [
+                    { name: 'Google Analytics 4', icon: HiOutlineUserGroup },
+                    { name: 'Google Search Console', icon: BsLayoutSidebar }
+                ]
+            },
+            {
+                category: 'Technical Strategy',
+                items: [
+                    { name: 'Schema Markup', icon: SiJavascript },
+                    { name: 'Core Web Vitals', icon: SiReact }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'web-app-maintenance',
+        title: 'Web & App Maintenance',
+        heroDesc: 'Proactive monitoring, security patching, version upgrades, and ongoing feature development to keep your digital products fast, secure, and competitive.',
+        desc: 'Launching a digital product is establishing a baseline; maintaining its performance and security is an ongoing commitment. Our maintenance and support retainers provide you with a dedicated engineering team that proactively monitors uptime, monitors error logs, and immediately responds to critical vulnerabilities.\n\nWe manage complex server transitions, database optimizations, dependency version upgrades (like migrating React or Django versions safely), and routine bug fixing. With strict Service Level Agreements (SLAs) and automated CI/CD pipelines, we ensure your mission-critical applications never suffer from technical debt or extended downtime.',
+        metric: '99.9%',
+        metricLabel: 'uptime guarantee',
+        tech: ['AWS', 'Docker', 'CI/CD Pipelines', 'Uptime Monitoring', 'Security Audits'],
+        techDetails: [
+            {
+                category: 'Infrastructure & Ops',
+                items: [
+                    { name: 'AWS Cloud', icon: SiNodedotjs },
+                    { name: 'Docker', icon: SiReact }
+                ]
+            },
+            {
+                category: 'Ongoing Support',
+                items: [
+                    { name: 'Security Patching', icon: MdOutlinePayments },
+                    { name: 'Performance Monitoring', icon: BsLayoutSidebar }
+                ]
+            }
+        ]
     }
 ]

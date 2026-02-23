@@ -15,6 +15,9 @@ const dynamicRoutes = [
   '/services/ecommerce-web',
   '/services/ecommerce-app',
   '/services/ui-ux-design',
+  '/services/cms-development',
+  '/services/seo-optimization',
+  '/services/web-app-maintenance',
   '/blog',
   '/blog/custom-web-development-vs-templates'
 ]
