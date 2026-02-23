@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
 import Marquee from '../components/Marquee'
 import Services from '../components/Services'
+import WhyChooseUs from '../components/WhyChooseUs'
 import HorizontalScroll from '../components/HorizontalScroll'
 import Portfolio from '../components/Portfolio'
 import About from '../components/About'
@@ -47,6 +48,7 @@ export default function Home() {
                 <Hero />
                 <Marquee />
                 <Services />
+                <WhyChooseUs />
                 <HorizontalScroll />
                 <Portfolio />
                 <About />
