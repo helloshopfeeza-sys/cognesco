@@ -1,12 +1,34 @@
 import { useState } from 'react'
 
 export default function Contact() {
-    const [sent, setSent] = useState(false)
+    const [status, setStatus] = useState('')
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        setSent(true)
-        setTimeout(() => setSent(false), 3000)
+        setStatus('submitting')
+
+        try {
+            const formData = new FormData(e.target)
+            const response = await fetch("https://formspree.io/f/xpqjkbde", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json",
+                },
+            })
+
+            if (response.ok) {
+                setStatus('success')
+                e.target.reset()
+                setTimeout(() => setStatus(''), 5000)
+            } else {
+                setStatus('error')
+                setTimeout(() => setStatus(''), 5000)
+            }
+        } catch (error) {
+            setStatus('error')
+            setTimeout(() => setStatus(''), 5000)
+        }
     }
 
     return (
@@ -73,11 +95,19 @@ export default function Contact() {
 
                         <div className="field">
                             <label htmlFor="message">Project Details</label>
-                            <textarea id="message" placeholder="Tell us about your project..." rows={5} required />
+                            <textarea id="message" name="message" placeholder="Tell us about your project..." rows={5} required />
                         </div>
 
-                        <button type="submit" className="submit-btn">
-                            {sent ? '✓ Sent' : 'Send Message'}
+                        <button
+                            type="submit"
+                            className="submit-btn"
+                            disabled={status === 'submitting'}
+                            style={status === 'error' ? { backgroundColor: '#dc2626' } : {}}
+                        >
+                            {status === 'submitting' ? 'Sending...' :
+                                status === 'success' ? '✓ Message Sent Successfully' :
+                                    status === 'error' ? 'Failed to Send. Try Again' :
+                                        'Send Message'}
                         </button>
                     </form>
                 </div>
