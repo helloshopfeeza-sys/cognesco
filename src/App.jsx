@@ -9,6 +9,7 @@ import ContactPage from './pages/ContactPage'
 import FAQPage from './pages/FAQPage'
 import BlogPage from './pages/BlogPage'
 import BlogPost from './pages/BlogPost'
+import ThankYouPage from './pages/ThankYouPage'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/thank-you" element={<ThankYouPage />} />
       </Routes>
     </Router>
   )

@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function Contact() {
     const [status, setStatus] = useState('')
+    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
@@ -20,7 +22,7 @@ export default function Contact() {
             if (response.ok) {
                 setStatus('success')
                 e.target.reset()
-                setTimeout(() => setStatus(''), 5000)
+                navigate('/thank-you')
             } else {
                 setStatus('error')
                 setTimeout(() => setStatus(''), 5000)
